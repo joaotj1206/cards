@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+    <link rel="stylesheet" href="css/estilo.css" >
+
+    <title>Cards</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1 id="txtTitulo"></h1>
+
+      <div id="cadastrar" class="divPage container">
+        <form id="formCadastrar">
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="foto">Imagem</label>
+            <input type="file" id="foto" class="form-control">
+            <progress value="0" max="100" id="upload_foto">
+          </div>
+
+          <button type="button" onclick="pageListar()" class="btn btn-default">Cancelar</button>
+          <button type="button" onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
+       
+          
+        </form>
+
+
+      </div>
+
+      <div id="listar-cards" class="divPage container"> 
+
+        <button type="button" onclick="pageCadastrar()" class="btn btn-primary">Cadastrar</button>
+        <button type="button" onclick="logout()" class="btn btn-danger">Sair</button>
+
+        <br></br>
+        
+        <div class="row" id="listar">
+        
+        </div>  
+
+      </div>
+
+      <div id="editar" class="divPage container"> 
+
+        <form id="formEditar">
+          <div class="form-group">
+            <label for="descricao_editar">Descrição</label>
+            <input type="text" id="descricao_editar" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="foto_editar">Imagem</label>
+            <input type="file" id="foto_editar" class="form-control">
+            <progress value="0" max="100" id="upload_foto">
+          </div>
+
+          <input type="hidden" id="key_editar" value="">
+          <input type="hidden" id="url_foto_editar" value="">
+
+          <button type="button" onclick="pageListar()" class="btn btn-default">Cancelar</button>
+          <button type="button" onclick="editar()" class="btn btn-primary">Editar</button>
+          
+        </form>
+
+      </div>
+
+      <div id="login" class="divPage">
+
+        <form id="formLogin">
+
+          <div class="form-group">
+            <label for="email_login">E-Mail</label>
+            <input type="email" id="email_login" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="senha_login">Senha</label>
+            <input type="password" id="senha_login" class="form-control">
+          </div>
+
+          <button type="button" onclick="criarUsuario()" class="btn btn-success">Cadastrar</button>
+          <button type="button" onclick="login()" class="btn btn-primary">Entrar</button>
+          <button type="button" onclick="logarComGoogle()" class="btn btn-facebook">Logar com Google</button>
+          
+        </form>
+        
+      </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    
+  </body>
+</html>
